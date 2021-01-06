@@ -9,7 +9,7 @@ board = ["#",
          " ", " ", " ",
          " ", " ", " ", ]
 
-player = "X"
+player = Fore.LIGHTRED_EX+'X'
 
 game_is_over = True
 
@@ -51,10 +51,10 @@ def handle_player():
 def flip_player():
     global player
 
-    if player == 'X':
-        player = 'O'
+    if player == Fore.LIGHTRED_EX+'X':
+        player = Fore.BLUE+'O'
     else:
-        player = 'X'
+        player = Fore.LIGHTRED_EX+'X'
 
 
 # 4) winner checker
@@ -78,7 +78,7 @@ def is_winner():
     elif diagonal1 or diagonal2:
         print(Fore.BLUE + f"{player}'s is win")
         game_is_over = False
-    # ---- if all above statements are False the game become tie ---#
+    # ---- if all above statements are False the game become tie ----#
     elif " " not in board:
         print(Fore.YELLOW + 'Game is Tie')
         game_is_over = False
