@@ -78,7 +78,7 @@ def is_winner():
     elif diagonal1 or diagonal2:
         print(Fore.BLUE + f"{player}'s is win")
         game_is_over = False
-    # ---- if all above statements are False the game become tie ----#
+    # ---- if all above statements are False the game become tie ---#
     elif " " not in board:
         print(Fore.YELLOW + 'Game is Tie')
         game_is_over = False
